@@ -1,14 +1,22 @@
+<MenuBtn@Button>:
+    font_size:40
+    size_hint_x:.3
 <Root>:
     sm: sm
     orientation:'vertical'
+    spacing:10
+    padding:10
     BoxLayout:
-        orientation:'vertical'
-        Button:
+        spacing:6
+        size_hint_y:.22
+        MenuBtn:
             text:'Prev'
-        Button:
+            on_press:
+                root.sm.current = root.sm.previous()
+        MenuBtn:
             text:'Next'
             on_press:
-                root.sm.next()
+                root.sm.current = root.sm.next()
 	ScreenManager:
 		id: sm
 		Screen:
