@@ -1,5 +1,14 @@
 <Root>:
     sm: sm
+    orientation:'vertical'
+    BoxLayout:
+        orientation:'vertical'
+        Button:
+            text:'Prev'
+        Button:
+            text:'Next'
+            on_press:
+                root.sm.next()
 	ScreenManager:
 		id: sm
 		Screen:
